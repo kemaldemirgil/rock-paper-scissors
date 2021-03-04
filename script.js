@@ -17,60 +17,64 @@ function compMath () {
 // console.log(compValue);
 var myScore = 0;
 var compScore = 0;
+var rString = "Rock";
+var pString = "Paper";
+var sString = "Scissors";
 document.getElementById("start").onclick = function game () {
     // Game Description for User
-    var info = confirm("       R = Rock\n       P = Paper\n       S = Scissors\nClick OK to continue...");
+    var info = confirm("Win 10 times to beat 216-Robot\nDo you want to start the game?");
     do {
         compMath();
         // console.log(compValue);
         if (info === true) {
-            var rps = prompt("'R'ock, 'P'aper, 'S'cissors?").toLowerCase();
+            var rps = prompt("Type:\nR for Rock,\nP for Paper,\nS for Scissors").toLowerCase();
             if (rps === "") {
                 alert("Please enter a valid value");
-            } else if (rps === compValue) {
-                draw();
-            } else if (rps === "r" && compValue === "p") {
-                lose();
-            } else if (rps === "r" && compValue === "s") {
-                win();
-            } else if (rps === "p" && compValue === "r") {
-                win();    
-            } else if (rps === "p" && compValue === "s") {
-                lose();
-            } else if (rps === "s" && compValue === "r") {
-                lose();
-            } else if (rps === "s" && compValue === "p") {
-                win();
             }
-            function draw () {
-                alert("Draw");
-                alert("Your Score = " + myScore + "\nComputer Score = " + compScore);
+            if (rps === compValue) {
+                alert("            Draw\n\n\n\n\nYou= " + myScore + "              216-Robot = " + compScore);
             }
-            function win () {
+            if (rps === "r" && compValue === "s") {
                 myScore++;
-                alert("Your Choice : " + rps + "\nComputer Choice : " + compValue + "\nYou win");
-                alert("Your Score = " + myScore + "\nComputer Score = " + compScore);
-            }
-            function lose () {
+                alert("You: Rock    216-Robot: Scissors\n\n\n             You Win !\n\n\nYou = " + myScore + "         216-Robot= " + compScore);
+            }   
+            else if (rps === "r" && compValue === "p") {
                 compScore++;
-                alert("Your Choice : " + rps + "\nComputer Choice : " + compValue + "\nYou lose");
-                alert("Your Score = " + myScore + "\nComputer Score = " + compScore);
+                alert("You: Rock    216-Robot: Paper\n\n\n             You Lose!\n\n\nYou = " + myScore + "         216-Robot= " + compScore);
+            }
+            if (rps === "p" && compValue === "r") {
+                myScore++;
+                alert("You: Paper    216-Robot: Rock\n\n\n             You Win !\n\n\nYou = " + myScore + "         216-Robot= " + compScore);
+            } else if (rps === "p" && compValue === "s") {
+                compScore++;
+                alert("You: Paper    216-Robot: Scissors\n\n\n             You Lose!\n\n\nYou = " + myScore + "         216-Robot= " + compScore);
+            }
+            if (rps === "s" && compValue === "r") {
+                myScore++;
+                alert("You: Scissors    216-Robot: Rock\n\n\n             You Lose\n\n\nYou = " + myScore + "         216-Robot= " + compScore);
+            } else if (rps === "s" && compValue === "p") {
+                compScore++;
+                alert("You: Scissors    216-Robot: Paper\n\n\n             You Win!\n\n\nYou = " + myScore + "         216-Robot= " + compScore);
             }
             if (myScore === 10 || compScore === 10) {
-                alert("   Final Score\nYour Score = " + myScore + "\nComputer Score = " + compScore);
+                alert("Final Score\nYou= " + myScore + "          216-Robot= " + compScore);
                 myScore = 0;
                 compScore = 0;
                 break;
             }
-        // If user doesn't accept desription, reload page
-        } else if (info === false) {
-            location.reload();
+        // If user doesn't accept description, reload page
         }
+    }
         // console.log(myScore);
         // console.log(compScore);
-    }
     // Whoever reaches 10, wins
-    while (myScore || compScore <= 10);
+    while (myScore || compScore <= 10)
+    if (info === false) {
+        location.reload();
+    }
+
+
 }
+
 
 // console.log(compValue);
