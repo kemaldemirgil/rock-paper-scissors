@@ -1,0 +1,52 @@
+body {
+    background-image: linear-gradient(to right, #cf7dcb, rgb(179, 236, 46));
+    text-align: center;
+    display: block;
+}
+h1 {
+    font-family:cursive;
+    margin-bottom: 13%;
+    font-size: 60px;
+    text-shadow: 2px 2px 2px rgb(0, 0, 0), 3px 3px 30px purple;
+    color: #e255db;
+}
+p {
+    font-family: cursive;
+    color: antiquewhite;
+    text-shadow: 2px 2px 2px #e255db;
+    font-size: 24px;
+}
+p:nth-child(1) {
+    text-decoration: underline;
+}
+button {
+    background-color: rgb(226, 240, 193);
+    padding: 2%;
+    font-family: cursive;
+    font-size: 18px;
+    color: #eb24e1;
+    box-shadow: 4px 4px 10px #cf7dcb;
+    border: 2px solid #eb24e1;
+    border-radius: 10px;
+    animation: grow 1500ms infinite;
+}
+button:hover {
+    background-color: rgb(206, 219, 177);
+    cursor: pointer;
+    font-size: 19px;
+    
+}
+h1:hover, p:hover {
+    cursor: default;
+}
+@keyframes grow {
+    10% {
+        scale: 1.01;
+    }
+    50% {
+        scale: 1.07;
+    }
+    100% {
+        scale: 1.01;
+    }
+}
