@@ -32,7 +32,7 @@ document.getElementById("start").onclick = function game () {
                 alert("Please enter a valid value");
             }
             if (rps === compValue) {
-                alert("You= " + myScore + "              216-Robot = " + compScore + "\n\n\n            ❌Draw❌\n\n\n");
+                alert("\n\n\n            ❌Draw❌\n\n\nYou= " + myScore + "              216-Robot = " + compScore);
             }
             if (rps === "r" && compValue === "s") {
                 myScore++;
