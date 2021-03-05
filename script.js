@@ -7,7 +7,7 @@ function compMath () {
         compValue = "r";
     } else if (myRandom === 1) {
         compValue = "p";
-    } else if (myRandom === 2) {
+    } else {
         compValue = "s";
     }
     // console.log(compValue);
@@ -18,11 +18,10 @@ function compMath () {
 var myScore = 0;
 var compScore = 0;
 document.getElementById("start").onclick = function game () {
-    // Game Description for User
+    // Game Starter
     var info = confirm("Win 10 times to beat 216-Robot\nDo you want to start the game?");
     do {
         compMath();
-        // console.log(compValue);
         if (info === true) {
             var rps = prompt("Type:\nR for Rock,\nP for Paper,\nS for Scissors").toLowerCase();
             if (rps === "") {
@@ -65,19 +64,12 @@ document.getElementById("start").onclick = function game () {
                 compScore = 0;
                 break;
             }
-        // If user doesn't accept description, reload page
         }
     }
-        // console.log(myScore);
-        // console.log(compScore);
     // Whoever reaches 10, wins
     while (myScore || compScore <= 10)
+    // If user doesn't accept description, reload page
     if (info === false) {
         location.reload();
     }
-
-
 }
-
-
-// console.log(compValue);
