@@ -17,9 +17,6 @@ function compMath () {
 // console.log(compValue);
 var myScore = 0;
 var compScore = 0;
-var rString = "Rock";
-var pString = "Paper";
-var sString = "Scissors";
 document.getElementById("start").onclick = function game () {
     // Game Description for User
     var info = confirm("Win 10 times to beat 216-Robot\nDo you want to start the game?");
