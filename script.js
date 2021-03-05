@@ -36,7 +36,7 @@ document.getElementById("start").onclick = function game () {
             }
             if (rps === "r" && compValue === "s") {
                 myScore++;
-                alert("You: Rock    216-Robot: Scissors\n\n\n         🌟🌌✨You Win !🌟🌌✨\n\n\nYou = " + myScore + "         216-Robot= " + compScore);
+                alert("You: Rock    216-Robot: Scissors\n\n\n         🌟🌌✨You Win!🌟🌌✨\n\n\nYou = " + myScore + "         216-Robot= " + compScore);
             }   
             else if (rps === "r" && compValue === "p") {
                 compScore++;
@@ -44,14 +44,14 @@ document.getElementById("start").onclick = function game () {
             }
             if (rps === "p" && compValue === "r") {
                 myScore++;
-                alert("You: Paper    216-Robot: Rock\n\n\n         🌟🌌✨You Win !🌟🌌✨\n\n\nYou = " + myScore + "         216-Robot= " + compScore);
+                alert("You: Paper    216-Robot: Rock\n\n\n         🌟🌌✨You Win!🌟🌌✨\n\n\nYou = " + myScore + "         216-Robot= " + compScore);
             } else if (rps === "p" && compValue === "s") {
                 compScore++;
                 alert("You: Paper    216-Robot: Scissors\n\n\n         💥🔥💣You Lose!💥🔥💣\n\n\nYou = " + myScore + "         216-Robot= " + compScore);
             }
             if (rps === "s" && compValue === "r") {
                 compScore++;
-                alert("You: Scissors    216-Robot: Rock\n\n\n         💥🔥💣You Lose💥🔥💣\n\n\nYou = " + myScore + "         216-Robot= " + compScore);
+                alert("You: Scissors    216-Robot: Rock\n\n\n         💥🔥💣You Lose!💥🔥💣\n\n\nYou = " + myScore + "         216-Robot= " + compScore);
             } else if (rps === "s" && compValue === "p") {
                 myScore++;
                 alert("You: Scissors    216-Robot: Paper\n\n\n         🌟🌌✨You Win!🌟🌌✨\n\n\nYou = " + myScore + "         216-Robot= " + compScore);
