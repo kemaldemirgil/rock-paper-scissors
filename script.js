@@ -56,11 +56,11 @@ document.getElementById("start").onclick = function game () {
                 myScore++;
                 alert("You: Scissors    216-Robot: Paper\n\n\n         🌟🌌✨You Win!🌟🌌✨\n\n\nYou = " + myScore + "         216-Robot= " + compScore);
             }
-            if (myScore === 3 || compScore === 3) {
-                if (myScore ===3) {
+            if (myScore === 10 || compScore === 10) {
+                if (myScore === 10) {
                     alert("💎💎💎YOU WIN💎💎💎")
                 }
-                if (compScore ===3) {
+                if (compScore === 10) {
                     alert("☠️☠️☠️YOU LOSE☠️☠️☠️")
                 }
                 alert("          Final Score\nYou= " + myScore + "          216-Robot= " + compScore);
