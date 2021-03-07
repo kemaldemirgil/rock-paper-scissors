@@ -40,7 +40,7 @@ h1:hover, p:hover {
     cursor: default;
 }
 @keyframes grow {
-    10% {
+    0% {
         scale: 1.01;
     }
     50% {
